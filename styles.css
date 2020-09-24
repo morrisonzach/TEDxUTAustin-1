@@ -6,9 +6,9 @@
          url('clock_font/digital-7.woff2') format('woff2');
 }
 section.text-center.container-fluid.position-relative.overflow-hidden.mt-2 {
-    border-top: 3px yellow dotted;
-    border-bottom: 3px yellow dotted;
-    color: yellow;
+    border-top: 3px red dotted;
+    border-bottom: 3px red dotted;
+    color: red;
     height: 5em;
 }
 .marquee {
