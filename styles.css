@@ -1,49 +1,11 @@
-@font-face {
-    font-family: 'clock';
-    src: url('clock_font/digital-7.ttf');
-    src: url('clock_font/digital-7.ttf?#iefix') format('truetype'),
-         url('clock_font/digital-7.woff') format('woff'),
-         url('clock_font/digital-7.woff2') format('woff2');
+* {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
 }
-section.text-center.container-fluid.position-relative.overflow-hidden.mt-2 {
-    border-top: 3px red dotted;
-    border-bottom: 3px red dotted;
-    color: red;
-    height: 5em;
-}
-.marquee {
- position: absolute;
- width: 100%!important;
- top: 0;
- font-family: 'clock', arial;
- font-size: 5em;
- line-height: 5rem;
- white-space: nowrap;
- text-align: center;
- -moz-transform: translateX(100%);
- -webkit-transform: translateX(100%);	
- transform: translateX(100%);
- -moz-animation: scroll-left 10s linear infinite;
- -webkit-animation: scroll-left 10s linear infinite;
- animation: scroll-left 10s linear infinite;
-}
-@-moz-keyframes scroll-left {
- 0%   { -moz-transform: translateX(100%); }
- 100% { -moz-transform: translateX(-120%); }
-}
-@-webkit-keyframes scroll-left {
- 0%   { -webkit-transform: translateX(100%); }
- 100% { -webkit-transform: translateX(-120%); }
-}
-@keyframes scroll-left {
- 0% { 
- -moz-transform: translateX(100%);
- -webkit-transform: translateX(100%);
- transform: translateX(100%);
- }
- 100% { 
- -moz-transform: translateX(-120%);
- -webkit-transform: translateX(-120%);
- transform: translateX(-120%);
- }
+body {
+    background: url(bg.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
