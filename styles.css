@@ -3,6 +3,27 @@
     font-family: 'Roboto Condensed', sans-serif;
     margin: 0;
 }
+.bg-acqua {
+    background-color: #036564;
+}
+.bg-panton {
+    background-color: #F2C45A;
+}
+.bg-cantaloupe {
+    background-color: #BFB35A;
+}
+.bg-qwhite {
+    background-color: #DEDDDB;
+}
+.bg-wegner {
+    background-color: #88A65E;
+}
+.bg-eames {
+    background-color: #8C2318;
+}
+.bg-knoll {
+    background-color: #5E8C6A;
+}
 .bg-dbterra {
     background-color: #E8DDCB;
 }
@@ -14,9 +35,34 @@
 }
 html, body {
     background-color: white!important;
-    /* background: url('runway.jpg') no-repeat center center fixed;  */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+div.col-sm-6.mb-5 > div.card {
+    box-shadow: -0.05em 0.05em 1em 0.001em black;
+    border-radius: 1em;
+}
+.icon-linkedIn {
+    background-image: url('assets/decor/LI-In-Bug.png');
+    background-size: cover;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+}
+.icon-yt {
+    background-image: url('assets/decor/yt.png');
+    background-size: cover;
+    display: inline-block;
+    height: 3.105rem;
+    width: 4.5rem;
+}
+.card-body {
+    height: 20vh;
+}
+div.tab-pane > a > i {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
