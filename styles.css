@@ -1,10 +1,18 @@
 * {
-    color: black;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif!important;
     margin: 0;
+}
+.text-white {
+    color: white!important;
+}
+.bg-profonda {
+    background-color: #033649;
 }
 .bg-acqua {
     background-color: #036564;
+}
+.bg-abisso {
+    background-color: #031634;
 }
 .bg-panton {
     background-color: #F2C45A;
@@ -34,15 +42,14 @@
     background-color: #CDB380;
 }
 html, body {
-    background-color: white!important;
+    background-color: black!important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-div.col-sm-6.mb-5 > div.card {
+div.col-sm-6.mb-5 > div.h-100.border-dark {
     box-shadow: -0.05em 0.05em 1em 0.001em black;
-    border-radius: 1em;
 }
 .icon-linkedIn {
     background-image: url('assets/decor/LI-In-Bug.png');
@@ -58,11 +65,23 @@ div.col-sm-6.mb-5 > div.card {
     height: 3.105rem;
     width: 4.5rem;
 }
+.icon-insta {
+    background-image: url('assets/decor/insta.png');
+    background-size: cover;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+}
+.icon-twit {
+    background-image: url('assets/decor/twitter.png');
+    background-size: cover;
+    display: inline-block;
+    height: 3rem;
+    width: 3rem;
+}
 .card-body {
     height: 20vh;
 }
-div.tab-pane > a > i {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.card-title, .card-body {
+    color: white;
 }
