@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ziem">
+    <meta name="contact" content="morrisonizach@gmail.com">
+    <meta name="description" content="site made for TEDxUTAustin-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TEDxUTAustin</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <script src="https://use.fontawesome.com/50ce77b315.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <section class="text-center position-relative overflow-hidden p-3">
+        <h1>
+            <span style="color: #C02942;">TED</span> x UTAustin:
+        </h1>
+        <h2>
+            Ballroom Breakdown
+        </h2>
+    </section>
+    <section class="w-100 overflow-hidden">
+        <div id="slides" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#slides" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+            </ul>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315"
+                            src="https://www.youtube.com/embed/VNajU_-PQ-I" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" width="560" height="315"
+                            src="https://www.youtube.com/embed/BtCNVptdHbg" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#slides" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#slides" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
+    </section>
+    <section class="text-center bg-black text-white p-5">
+        <h1 class="text-white">
+            The Voting:
+        </h1>
+        <div class="mx-auto bg-eames p-sm-5 rounded shadow-lg w-50">
+            <form class="container" action="/vote" method="POST" enctype="application/x-www-form-urlencoded">
+                <h3 class="text-center">
+                    Who did you love the most? Vote here!
+                </h3>
+                <div class="form-group">
+                    <label for="name">
+                        Full Name:
+                    </label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter full name" name="name"
+                        required>
+                    <div class="valid-feedback">valid.</div>
+                    <div class="invalid-feedback">please fill out this field correctly.</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">
+                        Email:
+                    </label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+                    <div class="valid-feedback">valid.</div>
+                    <div class="invalid-feedback">please fill out this field correctly.</div>
+                </div>
+                <div class="container mt-2">
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="malikRadio" name="voting"
+                            value="Malik Julien">
+                        <label class="custom-control-label" for="malikRadio">Malik Julien</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="leoRadio" name="voting"
+                            value="Leo Baldwin">
+                        <label class="custom-control-label" for="leoRadio">Leo Baldwin</label>
+                    </div>
+                    <div class="custom-control custom-radio">
+                        <input type="radio" class="custom-control-input" id="princeRadio" name="voting"
+                            value="Prince Baldwin">
+                        <label class="custom-control-label" for="princeRadio">Prince Baldwin</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </form>
+            <div id="success_message" style="width:100%; height:100%; display:none; ">
+                <h3>Submited successfully!</h3>
+            </div>
+            <div id="error_message" style="width:100%; height:100%; display:none; ">
+                <h3>Error</h3>
+                Sorry there was an error sending your form.
+            </div>
+    </section>
+    <section class="text-center p-5 overflow-hidden">
+        <h1>
+            Crew:
+        </h1>
+        <br>
+        <div class="row">
+            <div class="col-sm-6 mb-5">
+                <div class="h-100 border-dark w-75 overflow-hidden mx-auto bg-eames">
+                    <img src="assets/HypatiaSorunke.jpg" class="card-img-top" alt="Hypatia Sorunke">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            Hypatia Sorunke
+                        </h2>
+                        <h5 class="card-title text-secondary">
+                            producer/director
+                        </h5>
+                        <h6 class="card-title text-muted">
+                            she/her
+                        </h6>
+                        <ul id="cardTabs" class="nav nav-tabs justify-content-end card-header-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark active" id="bio-tab" data-toggle="tab" href="#hypatiaBio"
+                                    role="tab" aria-controls="bio" aria-selected="true">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                                    </svg>
+                                    bio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" id="links-tab" data-toggle="tab" href="#hypatiaLink"
+                                    role="tab" aria-controls="links" aria-selected="false">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-link-45deg"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                                        <path
+                                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z" />
+                                    </svg>
+                                    link(s)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body overflow-auto">
+                        <div class="tab-content" id="cardTabContent">
+                            <div class="tab-pane fade show active" id="hypatiaBio" role="tabpanel"
+                                aria-labelledby="bio-tab">
+                                <p class="card-text">
+                                    A multimedia artist based in Austin, Texas. Originally a movement artist and fiction
+                                    writer, she has been able to
+                                    combine her passions of storytelling and visual art through her photography,
+                                    cinematography, and writing. As a recent
+                                    graduate from the University of Texas at Austin with a Plan II Honors and African
+                                    and African Diaspora Studies dual
+                                    degree with a minor in Government, she is interested in understanding identity
+                                    politics as it surrounds queer people of
+                                    color, with a primary focus on Black queer women, and creating interactive pieces
+                                    that provide a social commentary on
+                                    the world. Her artistic approach is best summed up by the Franz Fanon quote,“ I am
+                                    not a prisoner of History… In the
+                                    world I am heading for, I am endlessly creating myself,” from Black Skin, White
+                                    Masks. She often revisits this mantra to
+                                    ground herself in the endless possibilities she imagines of the future, as her
+                                    artistic process is like a child on a
+                                    playground, where imagination leads and the body follows.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="hypatiaLink" role="tabpanel" aria-labelledby="links-tab">
+                                <a href="https://www.youtube.com/channel/UCRlAbYHsTJwAHjsGVj7ViEQ">
+                                    <i class="icon-yt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mb-5">
+                <div class="h-100 border-dark w-75 overflow-hidden mx-auto bg-eames">
+                    <img src="assets/CortianaBarnes.png" class="card-img-top" alt="Cortiana Barnes">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            Cortiana Barnes
+                        </h2>
+                        <h5 class="card-title text-secondary">
+                            assistant director
+                        </h5>
+                        <h6 class="card-title text-muted">
+                            she/her
+                        </h6>
+                        <ul id="cardTabs" class="nav nav-tabs justify-content-end card-header-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark active" id="bio-tab" data-toggle="tab" href="#cortianaBio"
+                                    role="tab" aria-controls="bio" aria-selected="true">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                                    </svg>
+                                    bio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" id="links-tab" data-toggle="tab" href="#cortianaLink"
+                                    role="tab" aria-controls="links" aria-selected="false">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-link-45deg"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                                        <path
+                                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z" />
+                                    </svg>
+                                    link(s)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body overflow-auto">
+                        <div class="tab-content" id="cardTabContent">
+                            <div class="tab-pane fade show active" id="cortianaBio" role="tabpanel"
+                                aria-labelledby="bio-tab">
+                                <p class="card-text">
+                                    A filmmaker from Houston, TX and a recent graduate of the University of Texas at
+                                    Austin with a B.S.
+                                    in Radio-Television-Film. She has written and directed her own student short films
+                                    as well as shot and edited numerous
+                                    video projects by commission. From her education, she has experience in all areas of
+                                    production but specializes in
+                                    Screenwriting and Directing.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="cortianaLink" role="tabpanel" aria-labelledby="links-tab">
+                                <a href="http://linkedin.com/in/cortiana-barnes-3aa21b1a9">
+                                    <i class="icon-linkedIn"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 mb-5">
+                <div class="h-100 border-dark w-75 overflow-hidden mx-auto bg-eames">
+                    <img src="assets/ZacharyMorrison.jpg" class="card-img-top" alt="Zachary Morrison">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            Zachary Morrison
+                        </h2>
+                        <h5 class="card-title text-secondary">
+                            website developer
+                        </h5>
+                        <h6 class="card-title text-muted">
+                            he/him
+                        </h6>
+                        <ul id="cardTabs" class="nav nav-tabs justify-content-end card-header-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark active" id="bio-tab" data-toggle="tab" href="#zacharyBio"
+                                    role="tab" aria-controls="bio" aria-selected="true">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                                    </svg>
+                                    bio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" id="links-tab" data-toggle="tab" href="#zacharyLink"
+                                    role="tab" aria-controls="links" aria-selected="false">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-link-45deg"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                                        <path
+                                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z" />
+                                    </svg>
+                                    link(s)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body overflow-auto">
+                        <div class="tab-content" id="cardTabContent">
+                            <div class="tab-pane fade show active" id="zacharyBio" role="tabpanel"
+                                aria-labelledby="bio-tab">
+                                <p class="card-text">
+                                    A freelance developer and corporation co-founder of Anubis Corp. He resides in
+                                    Austin, TX attending the University of Texas at Austin.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="zacharyLink" role="tabpanel" aria-labelledby="links-tab">
+                                <a href="https://www.linkedin.com/in/zachary-morrison-b242531a8/">
+                                    <i class="icon-linkedIn"></i>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCCLBAK55vcXlZPpqydyAdTQ">
+                                    <i class="icon-yt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mb-5">
+                <div class="h-100 border-dark w-75 overflow-hidden mx-auto bg-eames">
+                    <img src="assets/SarahOgun.png" class="card-img-top" alt="Sarah Ogun">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            Sarah Ogun
+                        </h2>
+                        <h5 class="card-title text-secondary">
+                            cast
+                        </h5>
+                        <h6 class="card-title text-muted">
+                            they/them
+                        </h6>
+                        <ul id="cardTabs" class="nav nav-tabs justify-content-end card-header-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark active" id="bio-tab" data-toggle="tab" href="#sarahBio"
+                                    role="tab" aria-controls="bio" aria-selected="true">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                                    </svg>
+                                    bio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" id="links-tab" data-toggle="tab" href="#sarahLink"
+                                    role="tab" aria-controls="links" aria-selected="false">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-link-45deg"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                                        <path
+                                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z" />
+                                    </svg>
+                                    link(s)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body overflow-auto">
+                        <div class="tab-content" id="cardTabContent">
+                            <div class="tab-pane fade show active" id="sarahBio" role="tabpanel"
+                                aria-labelledby="bio-tab">
+                                <p class="card-text">
+                                    Screenwriter and poet.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="sarahLink" role="tabpanel" aria-labelledby="links-tab">
+                                <embed height="auto" width="100%"
+                                    src="https://www.gofundme.com/mvc.php?route=widgets/mediawidget&fund=4grudw-help-rashida-medically-transition&image=1&coinfo=1&preview=1"
+                                    type="text/html"></embed>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 mb-5">
+                <div class="h-100 border-dark w-75 overflow-hidden mx-auto bg-eames">
+                    <img src="assets/JordWalters.png" class="card-img-top" alt="Zachary Morrison">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            Jord Walters
+                        </h2>
+                        <h5 class="card-title text-secondary">
+                            cast
+                        </h5>
+                        <h6 class="card-title text-muted">
+                            they/them
+                        </h6>
+                        <ul id="cardTabs" class="nav nav-tabs justify-content-end card-header-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark active" id="bio-tab" data-toggle="tab" href="#jordBio"
+                                    role="tab" aria-controls="bio" aria-selected="true">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                                    </svg>
+                                    bio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" id="links-tab" data-toggle="tab" href="#jordLink"
+                                    role="tab" aria-controls="links" aria-selected="false">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-link-45deg"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                                        <path
+                                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z" />
+                                    </svg>
+                                    link(s)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body overflow-auto">
+                        <div class="tab-content" id="cardTabContent">
+                            <div class="tab-pane fade show active" id="jordBio" role="tabpanel"
+                                aria-labelledby="bio-tab">
+                                <p class="card-text">
+                                    Jord is a second-semester senior at the University of Texas at Austin, completing
+                                    degrees in history and African &
+                                    African diaspora studies. Their interests include fashion, nature and the future.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="jordLink" role="tabpanel" aria-labelledby="links-tab">
+                                <a
+                                    href="https://www.bustle.com/wellness/32-black-led-queer-trans-organizations-to-support-22959025">
+                                    <img style="width: 100%; height: auto;" src="assets/bustle.png"
+                                        alt="Bustle Article">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mb-5">
+                <div class="h-100 border-dark w-75 overflow-hidden mx-auto bg-eames">
+                    <img src="assets/MalikJulien.png" class="card-img-top" alt="Sarah Ogun">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            Malik Julien
+                        </h2>
+                        <h5 class="card-title text-secondary">
+                            cast
+                        </h5>
+                        <h6 class="card-title text-muted">
+                            he/him
+                        </h6>
+                        <ul id="cardTabs" class="nav nav-tabs justify-content-end card-header-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark active" id="bio-tab" data-toggle="tab" href="#malikBio"
+                                    role="tab" aria-controls="bio" aria-selected="true">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                                    </svg>
+                                    bio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" id="links-tab" data-toggle="tab" href="#malikLink"
+                                    role="tab" aria-controls="links" aria-selected="false">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-link-45deg"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                                        <path
+                                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z" />
+                                    </svg>
+                                    link(s)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body overflow-auto">
+                        <div class="tab-content" id="cardTabContent">
+                            <div class="tab-pane fade show active" id="malikBio" role="tabpanel"
+                                aria-labelledby="bio-tab">
+                                <p class="card-text">
+                                    Recently turned 20, Malik Julien is a young independent filmmaker who is taking on
+                                    his third year at The University of
+                                    Texas at Austin where he’s studying Radio-Television-Film and pursuing a double
+                                    minor in Black Studies and
+                                    Entrepreneurship. Julien is a Black, Queer, and Christian identifying artist who
+                                    works towards telling the untold
+                                    stories of the Black and Queer communities. Julien grew up in a small coastal town
+                                    by the name of Texas City, TX where
+                                    he was raised by his Mother and Grandfather. Now located in Austin, He’s just
+                                    recently made his directorial debut with
+                                    the upcoming documentary, And They Were Loved, a story about three queer individuals
+                                    navigating their path towards
+                                    self-identity while facing the challenges of being queer in the American South.
+                                    Julien says that Ballroom was a driving
+                                    force for this documentary and it has opened a whirlwind of life-changing
+                                    opportunities for myself and for many
+                                    involved. “Ballroom offered a piece of life that my young queer self had always
+                                    longed for.” For Julien, Ballroom is a
+                                    haven for self-expression, acceptance, & most of all, family. The Legendary House of
+                                    Blahnik opened their doors to me
+                                    early 2020 and I’m beyond excited to what the future will hold,” Julien says.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="malikLink" role="tabpanel" aria-labelledby="links-tab">
+                                <a href="https://www.instagram.com/andtheywerelovedfilm/">
+                                    <i class="icon-insta"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6 mb-5">
+                <div class="h-100 border-dark w-75 overflow-hidden mx-auto bg-eames">
+                    <img src="assets/LeoBaldwin.png" class="card-img-top" alt="Zachary Morrison">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            Leo Baldwin
+                        </h2>
+                        <h5 class="card-title text-secondary">
+                            cast
+                        </h5>
+                        <h6 class="card-title text-muted">
+                            he/him
+                        </h6>
+                        <ul id="cardTabs" class="nav nav-tabs justify-content-end card-header-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark active" id="bio-tab" data-toggle="tab" href="#leoBio"
+                                    role="tab" aria-controls="bio" aria-selected="true">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                                    </svg>
+                                    bio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" id="links-tab" data-toggle="tab" href="#leoLink"
+                                    role="tab" aria-controls="links" aria-selected="false">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-link-45deg"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                                        <path
+                                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z" />
+                                    </svg>
+                                    link(s)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body overflow-auto">
+                        <div class="tab-content" id="cardTabContent">
+                            <div class="tab-pane fade show active" id="leoBio" role="tabpanel"
+                                aria-labelledby="bio-tab">
+                                <p class="card-text">
+                                    My name is Leo Baldwin, I am 22 years old and I am from the illustrious House of
+                                    Baldwin. When I first encountered vogue
+                                    I instantly fell in love. Vogue helps me express myself creatively by telling a
+                                    story. The category I am going to
+                                    practice for is butch queen fem and my favorite element is hands. I look up to icons
+                                    like Makayla Lanvin and Leiomy
+                                    Maldonado because of their contribution to this community. Seeing them dance so
+                                    passionately motivated me to pursue my
+                                    dream of becoming a polished voguer.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="leoLink" role="tabpanel" aria-labelledby="links-tab">
+                                <a href="https://www.youtube.com/channel/UCf2YPCEE9GnVsrAqei2TKUA">
+                                    <i class="icon-yt"></i>
+                                </a>
+                                <a href="https://www.instagram.com/theleobaldwin/">
+                                    <i class="icon-insta"></i>
+                                </a>
+                                <a href="https://twitter.com/TheLeoBaldwin">
+                                    <i class="icon-twit"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 mb-5">
+                <div class="h-100 border-dark w-75 overflow-hidden mx-auto bg-eames">
+                    <img src="assets/PrinceBaldwin.png" class="card-img-top" alt="Sarah Ogun">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            Prince Baldwin
+                        </h2>
+                        <h5 class="card-title text-secondary">
+                            cast
+                        </h5>
+                        <h6 class="card-title text-muted">
+                            he/him
+                        </h6>
+                        <ul id="cardTabs" class="nav nav-tabs justify-content-end card-header-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark active" id="bio-tab" data-toggle="tab" href="#princeBio"
+                                    role="tab" aria-controls="bio" aria-selected="true">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-person-circle"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                                        <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+                                    </svg>
+                                    bio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" id="links-tab" data-toggle="tab" href="#princeLink"
+                                    role="tab" aria-controls="links" aria-selected="false">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-link-45deg"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
+                                        <path
+                                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z" />
+                                    </svg>
+                                    link(s)
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body overflow-auto">
+                        <div class="tab-content" id="cardTabContent">
+                            <div class="tab-pane fade show active" id="princeBio" role="tabpanel"
+                                aria-labelledby="bio-tab">
+                                <p class="card-text">
+                                    I am 22 years old born and raised in Dallas Tx currently enrolled as a senior at
+                                    Texas State University majoring in
+                                    Computer science. I’ve been voguing for about 2 months now gaining inspiration from
+                                    amazingly talented femme queens such
+                                    as Daesja Laperla may she Rest In Peace, Leiomy, Tamiyah, Starr Revlon and Sinia
+                                    Braxton. Voguing helps me release a
+                                    certain type of energy that I don’t usually release on the daily basis. I’m a very
+                                    chill person who tends to be more
+                                    introverted, but when I step on that dance floor all of that goes away. When I vogue
+                                    I feel sexy and untamable, when I
+                                    vogue I feel like the little boy inside of me is finally getting to express himself.
+                                    When I vogue I feel love.
+                                </p>
+                            </div>
+                            <div class="tab-pane fade" id="princeLink" role="tabpanel" aria-labelledby="links-tab">
+                                <a href="https://www.youtube.com/Amarionjames">
+                                    <i class="icon-yt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
