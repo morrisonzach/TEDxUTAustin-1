@@ -2,17 +2,15 @@ runtime: go114
 env: standard
 
 handlers:
-- url: /(.*)
-  script: auto
-
 - url: /assets/(.*)
   static_files: www/assets/\1
-  upload: www/assets/(.*)
+  upload: www/assets/.*\.(jpg|png)$
 
-- url: /css/(.*)
-  static_files: www/css/\1
-  upload: www/css/(.*)
+- url: /css
+  static_dir: www/css
 
+- url: /.*
+  script: auto
 
 manual_scaling:
   instances: 1
