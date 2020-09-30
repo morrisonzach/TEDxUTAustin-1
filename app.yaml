@@ -2,14 +2,17 @@ runtime: go114
 env: standard
 
 handlers:
-- url: /
-  mime_type: text/html
-  static_files: www/index.html
-  upload: www/index.html
-
 - url: /(.*)
-  static_files: www/\1
-  upload: www/(.*)
+  script: auto
+
+- url: /assets/(.*)
+  static_files: www/assets/\1
+  upload: www/assets/(.*)
+
+- url: /css/(.*)
+  static_files: www/css/\1
+  upload: www/css/(.*)
+
 
 manual_scaling:
   instances: 1
